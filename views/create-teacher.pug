@@ -1,0 +1,649 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description' content='')
+    meta(name='author' content='')
+    title SB Admin 2 - Register
+    // Custom fonts for this template
+    link(href='vendor/fontawesome-free/css/all.min.css' rel='stylesheet' type='text/css')
+    link(rel='stylesheet' href='https://redirector.eservice.emarsys.net/ui/latest/css/app.css')
+    script(src='https://redirector.eservice.emarsys.net/ui/latest/js/app.js')
+    link(href='https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i' rel='stylesheet')
+    // Custom styles for this template
+    link(href='css/sb-admin-2.min.css' rel='stylesheet')
+    link(rel='stylesheet' type='text/css' href='https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css')
+    link(href='css/sb-admin-2.min.css' rel='stylesheet')
+    script(src='vendor/jquery/jquery.js')
+    script(src="https://unpkg.com/vue-multiselect@2.1.0")
+    script.
+      $(function () {
+        $.get("sidebar", function (data) {  
+        $("#side").html(data);
+        });
+      });
+  body.bg-gradient-primary
+    #wrapper
+      // slider kısmı
+      #side
+      #content-wrapper.d-flex.flex-column
+        .container
+          .card.o-none.border-0.shadow-lg.my-5.p-5
+            .card-body.p-0
+              // Nested Row within Card Body
+              .row
+                .col-lg-5.d-none.d-lg-block.bg-register-image
+                .col-lg-7
+                  .p-5
+                    .text-center
+                      h1.h4.text-gray-900.mb-4 &Ouml;&gbreve;retmen Ekle
+                    div#teacherForm.user
+                      .form-group.row
+                        .col-sm-6.mb-3.mb-sm-0
+                          input#teacherName.form-control.form-control-user(type='text' name='teacherName' placeholder='İsim')
+                        .col-sm-6
+                          input#teacherSurname.form-control.form-control-user(type='text' name='teacherSurname' placeholder='Soyisim')
+                      .form-group
+                        input#teacherPhone.form-control.form-control-user(type='tel' name='teacherPhone' placeholder='(5XX)XXXXXXX')
+                      .input-group.mb-3
+                      select#inputGroupSelect01.branch-class.custom-select(name='teacherBranch')
+                        option(selected='Türkçe') Türkçe
+                        option(value='Matematik') Matematik
+                        option(value='Fizik') Fizik
+                        option(value='Edebiyat') Edebiyat
+
+
+                        //test
+                      .e-field
+                        e-multiselect#dayPicker(name='dayPicker' placeholder='Gün Seçiniz')
+                          e-select-option(value='0')
+                            | pazartesi
+                          e-select-option(value='1')
+                            | salı
+                          e-select-option(value='2')
+                            | çarşamba
+                          e-select-option(value='3')
+                            | perşembe
+                          e-select-option(value='4')
+                            | cuma
+                          e-select-option(value='5')
+                            | cumartesi
+                          e-select-option(value='6')
+                            | pazar
+
+                      #pzt.form-group(style='display : none;')
+                        .e-field
+                          | Pazartesi
+                          e-multiselect#pztHours(name='pztHours' placeholder='Pazartesi Günü İçin Saat Aralığı Seçiniz')
+                            e-select-option(value='0') 
+                             |8:00 - 8:30
+                            e-select-option(value='1') 
+                             |8:30 - 9:00
+                            e-select-option(value='2') 
+                             |9:00 - 9:30
+                            e-select-option(value='3') 
+                             |9:30 - 10:00
+                            e-select-option(value='4') 
+                             |10:00 - 10:30
+                            e-select-option(value='5') 
+                             |10:30 - 11:00
+                            e-select-option(value='6') 
+                             |11:00 - 11:30
+                            e-select-option(value='7') 
+                             |11:30 - 12:00
+                            e-select-option(value='8') 
+                             |12:00 - 12:30
+                            e-select-option(value='9') 
+                             |12:30 - 13:00
+                            e-select-option(value='10') 
+                             |13:00 - 13:30
+                            e-select-option(value='11') 
+                             |13:30 - 14:00
+                            e-select-option(value='12') 
+                             |14:00 - 14:30
+                            e-select-option(value='13') 
+                             |14:30 - 15:00
+                            e-select-option(value='14') 
+                             |15:00 - 15:30
+                            e-select-option(value='15') 
+                             |15:30 - 16:00
+                            e-select-option(value='16') 
+                             |16:00 - 16:30
+                            e-select-option(value='17') 
+                             |16:30 - 17:00
+                            e-select-option(value='18') 
+                             |17:00 - 17:30
+                            e-select-option(value='19') 
+                             |17:30 - 18:00
+                            e-select-option(value='20') 
+                             |18:00 - 18:30
+                            e-select-option(value='21') 
+                             |18:30 - 19:00
+                            e-select-option(value='22') 
+                             |19:00 - 19:30
+                            e-select-option(value='23') 
+                             |19:30 - 20:00
+                            e-select-option(value='24') 
+                             |20:00 - 20:30
+                            e-select-option(value='23') 
+                             |20:30 - 21:00
+                            e-select-option(value='24') 
+                             |21:00 - 21:30
+                            e-select-option(value='23') 
+                             |21:30 - 22:00
+                      #sali.form-group(style='display : none;')
+                        .e-field
+                          | Salı
+                          e-multiselect#saliHours(name='saliHours' placeholder='Salı Günü İçin Saat Aralığı Seçiniz')
+                           e-select-option(value='0') 
+                             |8:00 - 8:30
+                           e-select-option(value='1') 
+                             |8:30 - 9:00
+                           e-select-option(value='2') 
+                             |9:00 - 9:30
+                           e-select-option(value='3') 
+                             |9:30 - 10:00
+                           e-select-option(value='4') 
+                             |10:00 - 10:30
+                           e-select-option(value='5') 
+                             |10:30 - 11:00
+                           e-select-option(value='6') 
+                             |11:00 - 11:30
+                           e-select-option(value='7') 
+                             |11:30 - 12:00
+                           e-select-option(value='8') 
+                             |12:00 - 12:30
+                           e-select-option(value='9') 
+                             |12:30 - 13:00
+                           e-select-option(value='10') 
+                             |13:00 - 13:30
+                           e-select-option(value='11') 
+                             |13:30 - 14:00
+                           e-select-option(value='12') 
+                             |14:00 - 14:30
+                           e-select-option(value='13') 
+                             |14:30 - 15:00
+                           e-select-option(value='14') 
+                             |15:00 - 15:30
+                           e-select-option(value='15') 
+                             |15:30 - 16:00
+                           e-select-option(value='16') 
+                             |16:00 - 16:30
+                           e-select-option(value='17') 
+                             |16:30 - 17:00
+                           e-select-option(value='18') 
+                             |17:00 - 17:30
+                           e-select-option(value='19') 
+                             |17:30 - 18:00
+                           e-select-option(value='20') 
+                             |18:00 - 18:30
+                           e-select-option(value='21') 
+                             |18:30 - 19:00
+                           e-select-option(value='22') 
+                             |19:00 - 19:30
+                           e-select-option(value='23') 
+                             |19:30 - 20:00
+                           e-select-option(value='24') 
+                             |20:00 - 20:30
+                           e-select-option(value='23') 
+                             |20:30 - 21:00
+                           e-select-option(value='24') 
+                             |21:00 - 21:30
+                           e-select-option(value='23') 
+                             |21:30 - 22:00
+                      #carsamba.form-group(style='display : none;')
+                        .e-field
+                          | Çarşamba
+                          e-multiselect#carsambaHours(name='carsambaHours' placeholder='Çarşamba Günü İçin Saat Aralığı Seçiniz')
+                           e-select-option(value='0') 
+                             |8:00 - 8:30
+                           e-select-option(value='1') 
+                             |8:30 - 9:00
+                           e-select-option(value='2') 
+                             |9:00 - 9:30
+                           e-select-option(value='3') 
+                             |9:30 - 10:00
+                           e-select-option(value='4') 
+                             |10:00 - 10:30
+                           e-select-option(value='5') 
+                             |10:30 - 11:00
+                           e-select-option(value='6') 
+                             |11:00 - 11:30
+                           e-select-option(value='7') 
+                             |11:30 - 12:00
+                           e-select-option(value='8') 
+                             |12:00 - 12:30
+                           e-select-option(value='9') 
+                             |12:30 - 13:00
+                           e-select-option(value='10') 
+                             |13:00 - 13:30
+                           e-select-option(value='11') 
+                             |13:30 - 14:00
+                           e-select-option(value='12') 
+                             |14:00 - 14:30
+                           e-select-option(value='13') 
+                             |14:30 - 15:00
+                           e-select-option(value='14') 
+                             |15:00 - 15:30
+                           e-select-option(value='15') 
+                             |15:30 - 16:00
+                           e-select-option(value='16') 
+                             |16:00 - 16:30
+                           e-select-option(value='17') 
+                             |16:30 - 17:00
+                           e-select-option(value='18') 
+                             |17:00 - 17:30
+                           e-select-option(value='19') 
+                             |17:30 - 18:00
+                           e-select-option(value='20') 
+                             |18:00 - 18:30
+                           e-select-option(value='21') 
+                             |18:30 - 19:00
+                           e-select-option(value='22') 
+                             |19:00 - 19:30
+                           e-select-option(value='23') 
+                             |19:30 - 20:00
+                           e-select-option(value='24') 
+                             |20:00 - 20:30
+                           e-select-option(value='23') 
+                             |20:30 - 21:00
+                           e-select-option(value='24') 
+                             |21:00 - 21:30
+                           e-select-option(value='23') 
+                             |21:30 - 22:00
+                      #persembe.form-group(style='display : none;')
+                        .e-field
+                          | Perşembe
+                          e-multiselect#persembeHours(name='persembeHours' placeholder='Perşembe Günü İçin Saat Aralığı Seçiniz')
+                           e-select-option(value='0') 
+                             |8:00 - 8:30
+                           e-select-option(value='1') 
+                             |8:30 - 9:00
+                           e-select-option(value='2') 
+                             |9:00 - 9:30
+                           e-select-option(value='3') 
+                             |9:30 - 10:00
+                           e-select-option(value='4') 
+                             |10:00 - 10:30
+                           e-select-option(value='5') 
+                             |10:30 - 11:00
+                           e-select-option(value='6') 
+                             |11:00 - 11:30
+                           e-select-option(value='7') 
+                             |11:30 - 12:00
+                           e-select-option(value='8') 
+                             |12:00 - 12:30
+                           e-select-option(value='9') 
+                             |12:30 - 13:00
+                           e-select-option(value='10') 
+                             |13:00 - 13:30
+                           e-select-option(value='11') 
+                             |13:30 - 14:00
+                           e-select-option(value='12') 
+                             |14:00 - 14:30
+                           e-select-option(value='13') 
+                             |14:30 - 15:00
+                           e-select-option(value='14') 
+                             |15:00 - 15:30
+                           e-select-option(value='15') 
+                             |15:30 - 16:00
+                           e-select-option(value='16') 
+                             |16:00 - 16:30
+                           e-select-option(value='17') 
+                             |16:30 - 17:00
+                           e-select-option(value='18') 
+                             |17:00 - 17:30
+                           e-select-option(value='19') 
+                             |17:30 - 18:00
+                           e-select-option(value='20') 
+                             |18:00 - 18:30
+                           e-select-option(value='21') 
+                             |18:30 - 19:00
+                           e-select-option(value='22') 
+                             |19:00 - 19:30
+                           e-select-option(value='23') 
+                             |19:30 - 20:00
+                           e-select-option(value='24') 
+                             |20:00 - 20:30
+                           e-select-option(value='23') 
+                             |20:30 - 21:00
+                           e-select-option(value='24') 
+                             |21:00 - 21:30
+                           e-select-option(value='23') 
+                             |21:30 - 22:00
+                      #cuma.form-group(style='display : none;')
+                        .e-field
+                          | Cuma
+                          e-multiselect#cumaHours(name='cumaHours' placeholder='Cuma Günü İçin Saat Aralığı Seçiniz')
+                           e-select-option(value='0') 
+                             |8:00 - 8:30
+                           e-select-option(value='1') 
+                             |8:30 - 9:00
+                           e-select-option(value='2') 
+                             |9:00 - 9:30
+                           e-select-option(value='3') 
+                             |9:30 - 10:00
+                           e-select-option(value='4') 
+                             |10:00 - 10:30
+                           e-select-option(value='5') 
+                             |10:30 - 11:00
+                           e-select-option(value='6') 
+                             |11:00 - 11:30
+                           e-select-option(value='7') 
+                             |11:30 - 12:00
+                           e-select-option(value='8') 
+                             |12:00 - 12:30
+                           e-select-option(value='9') 
+                             |12:30 - 13:00
+                           e-select-option(value='10') 
+                             |13:00 - 13:30
+                           e-select-option(value='11') 
+                             |13:30 - 14:00
+                           e-select-option(value='12') 
+                             |14:00 - 14:30
+                           e-select-option(value='13') 
+                             |14:30 - 15:00
+                           e-select-option(value='14') 
+                             |15:00 - 15:30
+                           e-select-option(value='15') 
+                             |15:30 - 16:00
+                           e-select-option(value='16') 
+                             |16:00 - 16:30
+                           e-select-option(value='17') 
+                             |16:30 - 17:00
+                           e-select-option(value='18') 
+                             |17:00 - 17:30
+                           e-select-option(value='19') 
+                             |17:30 - 18:00
+                           e-select-option(value='20') 
+                             |18:00 - 18:30
+                           e-select-option(value='21') 
+                             |18:30 - 19:00
+                           e-select-option(value='22') 
+                             |19:00 - 19:30
+                           e-select-option(value='23') 
+                             |19:30 - 20:00
+                           e-select-option(value='24') 
+                             |20:00 - 20:30
+                           e-select-option(value='23') 
+                             |20:30 - 21:00
+                           e-select-option(value='24') 
+                             |21:00 - 21:30
+                           e-select-option(value='23') 
+                             |21:30 - 22:00
+                      #cumartesi.form-group(style='display : none;')
+                        .e-field
+                          | Cumartesi
+                          e-multiselect#cumartesiHours(name='cumartesiHours' placeholder='Cumartesi Günü İçin Saat Aralığı Seçiniz')
+                           e-select-option(value='0') 
+                             |8:00 - 8:30
+                           e-select-option(value='1') 
+                             |8:30 - 9:00
+                           e-select-option(value='2') 
+                             |9:00 - 9:30
+                           e-select-option(value='3') 
+                             |9:30 - 10:00
+                           e-select-option(value='4') 
+                             |10:00 - 10:30
+                           e-select-option(value='5') 
+                             |10:30 - 11:00
+                           e-select-option(value='6') 
+                             |11:00 - 11:30
+                           e-select-option(value='7') 
+                             |11:30 - 12:00
+                           e-select-option(value='8') 
+                             |12:00 - 12:30
+                           e-select-option(value='9') 
+                             |12:30 - 13:00
+                           e-select-option(value='10') 
+                             |13:00 - 13:30
+                           e-select-option(value='11') 
+                             |13:30 - 14:00
+                           e-select-option(value='12') 
+                             |14:00 - 14:30
+                           e-select-option(value='13') 
+                             |14:30 - 15:00
+                           e-select-option(value='14') 
+                             |15:00 - 15:30
+                           e-select-option(value='15') 
+                             |15:30 - 16:00
+                           e-select-option(value='16') 
+                             |16:00 - 16:30
+                           e-select-option(value='17') 
+                             |16:30 - 17:00
+                           e-select-option(value='18') 
+                             |17:00 - 17:30
+                           e-select-option(value='19') 
+                             |17:30 - 18:00
+                           e-select-option(value='20') 
+                             |18:00 - 18:30
+                           e-select-option(value='21') 
+                             |18:30 - 19:00
+                           e-select-option(value='22') 
+                             |19:00 - 19:30
+                           e-select-option(value='23') 
+                             |19:30 - 20:00
+                           e-select-option(value='24') 
+                             |20:00 - 20:30
+                           e-select-option(value='23') 
+                             |20:30 - 21:00
+                           e-select-option(value='24') 
+                             |21:00 - 21:30
+                           e-select-option(value='23') 
+                             |21:30 - 22:00
+                      #pazar.form-group(style='display : none;')
+                        .e-field
+                          | Pazar
+                          e-multiselect#pazarHours(name='pazarHours' placeholder='Pazar Günü İçin Saat Aralığı Seçiniz')
+                           e-select-option(value='0') 
+                             |8:00 - 8:30
+                           e-select-option(value='1') 
+                             |8:30 - 9:00
+                           e-select-option(value='2') 
+                             |9:00 - 9:30
+                           e-select-option(value='3') 
+                             |9:30 - 10:00
+                           e-select-option(value='4') 
+                             |10:00 - 10:30
+                           e-select-option(value='5') 
+                             |10:30 - 11:00
+                           e-select-option(value='6') 
+                             |11:00 - 11:30
+                           e-select-option(value='7') 
+                             |11:30 - 12:00
+                           e-select-option(value='8') 
+                             |12:00 - 12:30
+                           e-select-option(value='9') 
+                             |12:30 - 13:00
+                           e-select-option(value='10') 
+                             |13:00 - 13:30
+                           e-select-option(value='11') 
+                             |13:30 - 14:00
+                           e-select-option(value='12') 
+                             |14:00 - 14:30
+                           e-select-option(value='13') 
+                             |14:30 - 15:00
+                           e-select-option(value='14') 
+                             |15:00 - 15:30
+                           e-select-option(value='15') 
+                             |15:30 - 16:00
+                           e-select-option(value='16') 
+                             |16:00 - 16:30
+                           e-select-option(value='17') 
+                             |16:30 - 17:00
+                           e-select-option(value='18') 
+                             |17:00 - 17:30
+                           e-select-option(value='19') 
+                             |17:30 - 18:00
+                           e-select-option(value='20') 
+                             |18:00 - 18:30
+                           e-select-option(value='21') 
+                             |18:30 - 19:00
+                           e-select-option(value='22') 
+                             |19:00 - 19:30
+                           e-select-option(value='23') 
+                             |19:30 - 20:00
+                           e-select-option(value='24') 
+                             |20:00 - 20:30
+                           e-select-option(value='23') 
+                             |20:30 - 21:00
+                           e-select-option(value='24') 
+                             |21:00 - 21:30
+                           e-select-option(value='23') 
+                             |21:30 - 22:00
+                      input#teacherSubmit.btn.btn-primary.btn-lg.form-control(type='button' value='Kaydet')
+                      hr
+                    hr
+      #errorNotification.e-notice.e-notice-toast.e-notice-withicon.e-notice-danger(style='display: none')
+        span.e-notice__icon
+          e-icon(icon='warning')
+        .e-notice__title
+          | Öğretmen kayıt edilirken hata ile karşılaşıldı.
+      #successNotification.e-notice.e-notice-toast.e-notice-withicon.e-notice-data-import(style='display: none')
+        span.e-notice__icon
+          e-icon(icon='user-plus')
+        .e-notice__title
+          | Öğretmen başarıyla kayıt edildi.
+    // Bootstrap core JavaScript
+    script(src='vendor/jquery/jquery.min.js')
+    script(src='vendor/bootstrap/js/bootstrap.bundle.min.js')
+    // Core plugin JavaScript
+    script(src='vendor/jquery-easing/jquery.easing.min.js')
+    // Custom scripts for all pages
+    script(src='js/sb-admin-2.min.js')
+    script(type='text/javascript' src='https://cdn.jsdelivr.net/jquery/latest/jquery.min.js')
+    script(type='text/javascript' src='https://cdn.jsdelivr.net/momentjs/latest/moment.min.js')
+    script(type='text/javascript' src='https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js')
+    link(href='src/jquery-weekdays.css' rel='stylesheet')
+    script(src='https://code.jquery.com/jquery-3.4.1.slim.min.js' integrity='sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n' crossorigin='anonymous')
+    link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js')
+    script(src='https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js')
+    link(href='https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css' rel='stylesheet')
+    script.
+      $(document).ready(function() {
+        var form = $('#teacherForm');
+        //Öğretmen kayıt script
+        form.on('click', '#teacherSubmit', function() {
+          var dayArray = $('#dayPicker').val().map((currentValue) => {
+          return currentValue.content;
+          });
+          var dayHoursData = getDayHours();
+          var formData = {
+          teacherName: $("#teacherName").val(),
+          teacherSurname: $("#teacherSurname").val(),
+          teacherPhone: $("#teacherPhone").val(),
+          teacherBranch: $("#inputGroupSelect01").val()
+          };
+          $.ajax({
+          type: "POST",
+          url: "/add_teacher",
+          data: {infos : formData, days : dayArray, dayHours: dayHoursData},
+          dataType: "json",
+          encode: true,
+          }).done(function (data) {
+            $('#successNotification').show();
+          }).fail(function (data){
+            console.log(data);
+            $('#errorNotification').show();
+          });
+
+          $('#errorNotification').click(function (){
+            $('#errorNotification').hide();
+          });
+          $('#successNotification').click(function (){
+            $('#successNotification').hide();
+          });
+        })
+      });
+      
+      function getDayHours(){
+        var pazartesi = $('#pztHours').val().map((currentValue) => {
+          return currentValue.value;
+          });
+          var sali = $('#saliHours').val().map((currentValue) => {
+          return currentValue.value;
+          });
+          var carsamba = $('#carsambaHours').val().map((currentValue) => {
+          return currentValue.value;
+          });
+          var persembe = $('#persembeHours').val().map((currentValue) => {
+          return currentValue.value;
+          });
+          var cuma = $('#cumaHours').val().map((currentValue) => {
+          return currentValue.value;
+          });
+          var cumartesi = $('#cumartesiHours').val().map((currentValue) => {
+          return currentValue.value;
+          });
+          var pazar = $('#pazarHours').val().map((currentValue) => {
+          return currentValue.value;
+          });
+          var dayHours = {'pazartesi' : pazartesi,'salı':sali,'çarşamba':carsamba,'perşembe':persembe,'cuma':cuma,'cumartesi':cumartesi,'pazar':pazar};
+          console.log('da');
+          return dayHours;
+      }
+
+      
+    script.
+      var days = $('#dayPicker');
+      days.change(function() {
+      var unselectedValues = [];
+      $.each( days.val(), function( index, value ){
+        unselectedValues.push(days.val()[index].value);
+      });
+      if(unselectedValues.includes("0"))
+      {
+      $('#pzt').show();
+      }
+      else {
+      $('#pzt').css("display", "none");
+      }
+      if(unselectedValues.includes("1"))
+      {
+      $('#sali').show();
+      }
+      else {
+      $('#sali').css("display", "none");
+      }
+      if(unselectedValues.includes("2"))
+      {
+      $('#carsamba').show();
+      }
+      else {
+      $('#carsamba').css("display", "none");
+      }
+      if(unselectedValues.includes("3"))
+      {
+      $('#persembe').show();
+      }
+      else {
+      $('#persembe').css("display", "none");
+      }
+      if(unselectedValues.includes("4"))
+      {
+      $('#cuma').show();
+      }
+      else {
+      $('#cuma').css("display", "none");
+      }
+      if(unselectedValues.includes("5"))
+      {
+      $('#cumartesi').show();
+      }
+      else {
+      $('#cumartesi').css("display", "none");
+      }
+      if(unselectedValues.includes("6"))
+      {
+      $('#pazar').show();
+      }
+      else {
+      $('#pazar').css("display", "none");
+      }
+      });
